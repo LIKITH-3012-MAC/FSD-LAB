@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="calculate()">Add Two Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            // 1. Taking Input
+            let num1 = prompt("Enter first number..:");
+            let num2 = prompt("Enter second number..:");
+
+            // 2. Type Conversion (String -> Number)
+            let n1 = Number(num1);
+            let n2 = Number(num2);
+
+            // Calculation
+            let sum = n1 + n2;
+
+            // Output
+            document.getElementById("result").innerHTML = "The sum is: " + sum;
+        }
+    </script>
+</body>
+</html>
