@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Simple Selectors */
+  * { font-family: Arial; }            /* Universal: Applies to everything */
+  h2 { color: DarkSlateBlue; }         /* Element: Targets all <h2> */
+  #unique-box { color: white; }        /* ID: Targets specific ID */
+  .info-text { font-style: italic; }   /* Class: Targets all elements with this class */
+  h1, h2 { text-align: center; }       /* Grouping: Targets both <h1> and <h2> */
+
+  /* Combinator Selectors */
+  div p { color: gray; }               /* Descendant: Any <p> inside a <div> */
+  div > p { border: 1px solid red; }   /* Child: ONLY <p> that are direct children of <div> */
+  h2 + p { font-weight: bold; }        /* Adjacent Sibling: The <p> immediately after <h2> */
+  h2 ~ p { text-decoration: underline;}/* General Sibling: All <p> following <h2> */
+</style>
+</head>
+<body>
+  <h1 id="unique-box" style="background: black;">Selector Demo</h1>
+  <h2>Combinator Section</h2>
+  <p>I am the adjacent sibling (bold).</p>
+  <p>I am a general sibling (underlined).</p>
+  
+  <div>
+    <p class="info-text">I am a direct child of the div (red border).</p>
+    <span>
+        <p>I am a descendant, but NOT a direct child (no red border).</p>
+    </span>
+  </div>
+</body>
+</html>

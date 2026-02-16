@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | The Developer Platform</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">NEXUS</div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="cta-btn">Get Started</button>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Build Faster with Nexus</h1>
+            <p>The premium coding tool for top developers.</p>
+            <div class="hero-buttons">
+                <button class="primary-btn">Start Free</button>
+                <button class="secondary-btn">Live Demo</button>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Why Nexus?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>⚡ Speed</h3>
+                    <p>Code compiles in milliseconds.</p>
+                </div>
+                <div class="card">
+                    <h3>🔒 Security</h3>
+                    <p>Bank-grade encryption.</p>
+                </div>
+                <div class="card">
+                    <h3>🤖 AI Power</h3>
+                    <p>Auto-complete your logic.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nexus Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* DARK MODE THEME */
+body {
+    background-color: #0f172a; /* Dark Navy */
+    color: #f8fafc; /* White Text */
+}
+
+/* HEADER FLEXBOX */
+header {
+    background-color: #1e293b;
+    padding: 1rem 2rem;
+    display: flex; /* Magic starts here */
+    justify-content: space-between; /* Spreads items apart */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a855f7; /* Neon Purple */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between links */
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a855f7; /* Hover Purple */
+}
+
+/* HERO SECTION */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #a855f7, #3b82f6); /* Gradient Text! */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* FEATURE CARDS (The Level 5 Test) */
+.card-container {
+    display: flex; /* Puts cards side-by-side */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Wraps to next line on mobile */
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s; /* Animation setup */
+    border: 1px solid #334155;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-10px); /* Moves up 10px */
+    border-color: #a855f7;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.cta-btn, .primary-btn {
+    background-color: #a855f7;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #020617;
+    color: #64748b;
+    margin-top: 50px;
+}
+</style>
+</html>

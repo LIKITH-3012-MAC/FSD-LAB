@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="saveData(); return false;">
+  <table border="1" cellpadding="9" cellspacing="0">
+
+    <tr>
+      <td>Full Name:</td>
+      <td><input type="text" id="name" required></td>
+    </tr>
+
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" id="password" required></td>
+    </tr>
+
+    <tr>
+      <td>Age:</td>
+      <td><input type="number" id="age"></td>
+    </tr>
+
+    <tr>
+      <td>Date of Birth:</td>
+      <td><input type="date" id="dob"></td>
+    </tr>
+
+    <tr>
+      <td>Gender:</td>
+      <td>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </td>
+    </tr>
+
+    <tr>
+      <td>Hobbies:</td>
+      <td>
+        <input type="checkbox" value="Reading"> Reading
+        <input type="checkbox" value="Sports"> Sports
+        <input type="checkbox" value="Music"> Music
+      </td>
+    </tr>
+
+    <tr>
+      <td>Course:</td>
+      <td>
+        <select id="course">
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>MECH</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Address:</td>
+      <td>
+        <textarea id="address" rows="4" cols="25"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </td>
+    </tr>
+
+  </table>
+</form>
+
+<script>
+function saveData() {
+
+  let name = document.getElementById("name").value;
+  let password = document.getElementById("password").value;
+  let age = document.getElementById("age").value;
+  let dob = document.getElementById("dob").value;
+  let course = document.getElementById("course").value;
+  let address = document.getElementById("address").value;
+
+  let gender = "";
+  let genders = document.getElementsByName("gender");
+  for (let g of genders) {
+    if (g.checked) gender = g.value;
+  }
+
+  let hobbies = [];
+  let hobbyInputs = document.querySelectorAll('input[type="checkbox"]');
+  hobbyInputs.forEach(h => {
+    if (h.checked) hobbies.push(h.value);
+  });
+
+  let data =
+    "REGISTRATION DETAILS\n\n" +
+    "Name: " + name + "\n" +
+    "Password: " + password + "\n" +
+    "Age: " + age + "\n" +
+    "Date of Birth: " + dob + "\n" +
+    "Gender: " + gender + "\n" +
+    "Hobbies: " + hobbies.join(", ") + "\n" +
+    "Course: " + course + "\n" +
+    "Address: " + address;
+
+  let blob = new Blob([data], { type: "text/plain" });
+  let link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "registration.txt";
+  link.click();
+}
+</script>
+
+</body>
+</html>

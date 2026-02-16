@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Pseudo-class: Targets state */
+  button:hover { background-color: lime; cursor: pointer; }
+  li:nth-child(even) { background-color: #f2f2f2; }
+
+  /* Pseudo-element: Targets specific parts */
+  p::first-letter { font-size: 300%; color: red; float: left; margin-right: 5px; }
+  h3::before { content: "⭐ "; }
+</style>
+</head>
+<body>
+  <h3>Special Heading</h3>
+  <p>This paragraph uses a pseudo-element to create a large drop-cap for the first letter.</p>
+  <button>Hover Over Me</button>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2 (Styled)</li>
+    <li>Item 3</li>
+    <li>Item 4 (Styled)</li>
+  </ul>
+</body>
+</html>

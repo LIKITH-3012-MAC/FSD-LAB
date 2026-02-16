@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* The container */
+    .ticker {
+      background: #333;
+      color: #fff;
+      overflow: hidden; /* Hides the text xqxqxaoutside the box */
+      white-space: nowrap; /* Keeps text on one line */
+    }
+
+    /* The moving element */
+    .move {
+      display: inline-block;
+      animation: slide 10s linear infinite;
+    }
+
+    /* The animation logic */
+    @keyframes slide {
+      0% { transform: translateX(100%); }   /* Start at right */
+      100% { transform: translateX(-100%); } /* End at left */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ticker">
+    <div class="move">⚠️ EXAM ALERT: Keep it simple and remember the keyframes!</div>
+  </div>
+
+</body>
+</html>
